@@ -1,0 +1,24 @@
+本项目用于FootballManager2024中的edt文件的读取和排序查看。
+Windows平台。
+示例edt：https://playgm.cc/thread-964284-1-1.html
+编写粗糙，如果有bug，非常抱歉浪费了你的时间。
+
+regen_legends.edt:
+  请将需要查看的edt文件全部重命名该文件名。
+sheet.csv:
+  由reader.cpp生成。
+reader.cpp:
+  用于将regen_legends.edt文件转换成sheet.csv文件便于使用excel查看。
+reader.exe:
+  确保regen_legends.edt存在后，请在命令行中直接运行该可执行文件。
+  例如： .\reader.exe
+sorter.cpp:
+  用于将sheet.csv中的球员数据通过“生日”从小到大排序，排序结果在sort_tmp中的result.csv文件。
+sorter.exe:
+  确保sheet.csv和sort_tmp/存在后，请在命令行中直接运行该可执行文件。
+  例如： .\reader.exe
+
+sort_tmp中的其他文件为排序的中间结果，便于调试，使用者无需在意。
+生成的.csv文件的第一行为格式空行，用于设置文件的UTF8字符集。
+
+
